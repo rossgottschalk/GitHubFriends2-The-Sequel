@@ -8,6 +8,8 @@
 
 #import "FriendListTableViewController.h"
 #import "APIController.h"
+#import "DeatilViewController.h"
+#import "Friend.h"
 
 @interface FriendListTableViewController () <APIControllerProtocol>
 
@@ -98,39 +100,44 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    DeatilViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FriendBioSegue"];
+    Friend *selectedFriend = self.friends[indexPath.row];
+    detailVC.friend = selectedFriend;
+    
+    
 }
-*/
+
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([segue.identifier isEqualToString:@"FriendBioSegue"])
+//    {
+//        DeatilViewController *detailVC = [segue destinationViewController];
+//        UITableViewCell *selectedCell = (UITableViewCell *) sender;
+//        NSIndexPath *indexPath = [self.tableView indexPathForCell:selectedCell];
+//        Friend *selectedFriend = self.friends [indexPath.row];
+//        detailVC.friend = selectedFriend;
+//        
+//    }
+//
+//}
+
 
 -(void)didReceiveAPIResults:(NSDictionary *)gitHubResponse
 {
-    /*
-     for (NSDictionary *result in gitHubResponse)
-     {
-     NSString *name = result[@"name"];
-     [self.friends addObject:name];
-     }
-     
-     @property (nonatomic) NSString *login;
-     @property (nonatomic) NSString *location;
-     @property (nonatomic) NSString *avatar_url;
-     @property (nonatomic) NSNumber *public_repos;
-     
-     
-     
-     */
     NSString *resultName = gitHubResponse[@"name"];
     [self.friends addObject:resultName];
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
     });
-    
+    //shout out to greg for this^^
 }
 
 @end
