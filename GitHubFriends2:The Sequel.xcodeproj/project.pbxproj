@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		5B1CFEC11D52C6A700558787 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFEC01D52C6A700558787 /* main.m */; };
 		5B1CFEC41D52C6A700558787 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFEC31D52C6A700558787 /* AppDelegate.m */; };
-		5B1CFEC71D52C6A700558787 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFEC61D52C6A700558787 /* ViewController.m */; };
 		5B1CFECA1D52C6A700558787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CFEC81D52C6A700558787 /* Main.storyboard */; };
 		5B1CFECC1D52C6A700558787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CFECB1D52C6A700558787 /* Assets.xcassets */; };
 		5B1CFECF1D52C6A700558787 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CFECD1D52C6A700558787 /* LaunchScreen.storyboard */; };
+		5B1CFED81D52C6F500558787 /* APIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFED71D52C6F500558787 /* APIController.m */; };
+		5B1CFEDB1D52C71700558787 /* FriendListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CFEDA1D52C71700558787 /* FriendListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +21,14 @@
 		5B1CFEC01D52C6A700558787 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B1CFEC21D52C6A700558787 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B1CFEC31D52C6A700558787 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5B1CFEC51D52C6A700558787 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5B1CFEC61D52C6A700558787 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5B1CFEC91D52C6A700558787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B1CFECB1D52C6A700558787 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B1CFECE1D52C6A700558787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B1CFED01D52C6A700558787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B1CFED61D52C6F500558787 /* APIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIController.h; sourceTree = "<group>"; };
+		5B1CFED71D52C6F500558787 /* APIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIController.m; sourceTree = "<group>"; };
+		5B1CFED91D52C71700558787 /* FriendListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListTableViewController.h; sourceTree = "<group>"; };
+		5B1CFEDA1D52C71700558787 /* FriendListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +63,10 @@
 			children = (
 				5B1CFEC21D52C6A700558787 /* AppDelegate.h */,
 				5B1CFEC31D52C6A700558787 /* AppDelegate.m */,
-				5B1CFEC51D52C6A700558787 /* ViewController.h */,
-				5B1CFEC61D52C6A700558787 /* ViewController.m */,
+				5B1CFED91D52C71700558787 /* FriendListTableViewController.h */,
+				5B1CFEDA1D52C71700558787 /* FriendListTableViewController.m */,
+				5B1CFED61D52C6F500558787 /* APIController.h */,
+				5B1CFED71D52C6F500558787 /* APIController.m */,
 				5B1CFEC81D52C6A700558787 /* Main.storyboard */,
 				5B1CFECB1D52C6A700558787 /* Assets.xcassets */,
 				5B1CFECD1D52C6A700558787 /* LaunchScreen.storyboard */,
@@ -149,7 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B1CFEC71D52C6A700558787 /* ViewController.m in Sources */,
+				5B1CFED81D52C6F500558787 /* APIController.m in Sources */,
+				5B1CFEDB1D52C71700558787 /* FriendListTableViewController.m in Sources */,
 				5B1CFEC41D52C6A700558787 /* AppDelegate.m in Sources */,
 				5B1CFEC11D52C6A700558787 /* main.m in Sources */,
 			);
